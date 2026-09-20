@@ -102,7 +102,7 @@ function iniciarJogo() {
 
     clearInterval(intervalo);
 
-    intervalo = setInterval(atualizar, 220);
+    intervalo = setInterval(atualizar, 160);
 
     desenhar();
 }
