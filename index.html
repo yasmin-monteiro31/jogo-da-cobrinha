@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cobrinha Montadora de Computador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🐍 Cobrinha Montadora</h1>
+        <p>Coma as peças e monte seu computador!</p>
+    </header>
+
+    <main>
+
+        <section class="jogo-area">
+
+            <div class="informacoes">
+
+                <div class="placar">
+                    Peças:
+                    <strong>
+                        <span id="pontos">0</span>/12
+                    </strong>
+                </div>
+
+                <div class="status">
+                    <span id="mensagem">Colete as peças!</span>
+                </div>
+
+            </div>
+
+            <canvas id="jogo" width="600" height="600"></canvas>
+
+            <div class="controles">
+
+                <p class="texto-computador">
+                    Use as setas do teclado para controlar a cobra
+                </p>
+
+                <div class="botoes-celular">
+
+                    <button class="botao-direcao cima" data-direcao="cima">
+                        ⬆️
+                    </button>
+
+                    <div class="linha-botoes">
+
+                        <button class="botao-direcao" data-direcao="esquerda">
+                            ⬅️
+                        </button>
+
+                        <button class="botao-direcao" data-direcao="baixo">
+                            ⬇️
+                        </button>
+
+                        <button class="botao-direcao" data-direcao="direita">
+                            ➡️
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <button class="botao-reiniciar" onclick="reiniciarJogo()">
+                    🔄 Reiniciar
+                </button>
+
+            </div>
+
+        </section>
+
+        <aside class="painel">
+
+            <h2>🧩 Peças do computador</h2>
+
+            <div class="pecas">
+
+                <div class="peca" id="processador">
+                    <span>🧠</span>
+                    <div>
+                        <strong>Processador</strong>
+                        <small>CPU</small>
+                    </div>
+                </div>
+
+                <div class="peca" id="ram">
+                    <span>💾</span>
+                    <div>
+                        <strong>Memória RAM</strong>
+                        <small>Memória</small>
+                    </div>
+                </div>
+
+                <div class="peca" id="ssd">
+                    <span>💿</span>
+                    <div>
+                        <strong>SSD</strong>
+                        <small>Armazenamento</small>
+                    </div>
+                </div>
+
+                <div class="peca" id="gpu">
+                    <span>🎮</span>
+                    <div>
+                        <strong>Placa de vídeo</strong>
+                        <small>GPU</small>
+                    </div>
+                </div>
+
+                <div class="peca" id="fonte">
+                    <span>🔌</span>
+                    <div>
+                        <strong>Fonte</strong>
+                        <small>Energia</small>
+                    </div>
+                </div>
+
+                <div class="peca" id="cooler">
+                    <span>🌀</span>
+                    <div>
+                        <strong>Cooler</strong>
+                        <small>Refrigeração</small>
+                    </div>
+                </div>
+
+                <div class="peca" id="placamae">
+                    <span>🟩</span>
+                    <div>
+                        <strong>Placa-mãe</strong>
+                        <small>Motherboard</small>
+                    </div>
+                </div>
+
+                <div class="peca" id="gabinete">
+                    <span>🖥️</span>
+                    <div>
+                        <strong>Gabinete</strong>
+                        <small>Case</small>
+                    </div>
+                </div>
+
+                <div class="peca" id="placasom">
+                    <span>🔊</span>
+                    <div>
+                        <strong>Placa de som</strong>
+                        <small>Áudio</small>
+                    </div>
+                </div>
+
+                <div class="peca" id="placarede">
+                    <span>🌐</span>
+                    <div>
+                        <strong>Placa de rede</strong>
+                        <small>Internet</small>
+                    </div>
+                </div>
+
+                <div class="peca" id="ventoinha">
+                    <span>💨</span>
+                    <div>
+                        <strong>Ventoinha</strong>
+                        <small>Refrigeração</small>
+                    </div>
+                </div>
+
+                <div class="peca" id="cabos">
+                    <span>🔗</span>
+                    <div>
+                        <strong>Cabos</strong>
+                        <small>Conexões</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+    <div id="telaFinal" class="tela-final">
+
+        <div class="final-conteudo">
+
+            <div class="confetes">
+                🎉 🎊 🎉
+            </div>
+
+            <h2>Computador montado!</h2>
+
+            <p>
+                Você coletou todas as 12 peças!
+            </p>
+
+            <div class="computador">
+
+                <div class="monitor">
+
+                    <div class="tela-monitor">
+                        <span>COMPUTADOR</span>
+                        <strong>PRONTO!</strong>
+                    </div>
+
+                </div>
+
+                <div class="base-monitor"></div>
+
+                <div class="gabinete-final">
+
+                    <div class="luz"></div>
+
+                    <div class="peca-final cpu">
+                        <span>CPU</span>
+                    </div>
+
+                    <div class="peca-final memoria">
+                        <span>RAM</span>
+                    </div>
+
+                    <div class="peca-final placa">
+                        <span>GPU</span>
+                    </div>
+
+                    <div class="peca-final cooler-final">
+                        <span>🌀</span>
+                    </div>
+
+                    <div class="peca-final ssd-final">
+                        <span>SSD</span>
+                    </div>
+
+                    <div class="peca-final fonte-final">
+                        <span>PSU</span>
+                    </div>
+
+                </div>
+
+                <div class="teclado">
+                    ⌨️ ⌨️ ⌨️ ⌨️ ⌨️
+                </div>
+
+            </div>
+
+            <h3>
+                🖥️ Seu computador está pronto!
+            </h3>
+
+            <button onclick="reiniciarJogo()">
+                Jogar novamente
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="style.js"></script>
+
+</body>
+</html>
